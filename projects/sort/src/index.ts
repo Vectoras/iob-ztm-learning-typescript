@@ -1,22 +1,22 @@
-class Sorter {
-  constructor(public collection: number[]) {}
+// importing classes
+import { NumbersCollection } from './NumbersCollection';
+import { CharactesCollection } from './CharactersCollection';
+import { LinkedList } from './LinkedList';
 
-  sort(): void {
-    const { length } = this.collection;
+const numbersCollection = new NumbersCollection([10, 3, 100, -5, 0]);
+numbersCollection.sort();
 
-    for (let i = 0; i < length; i++)
-      for (let j = 0; j < length - i - 1; j++) {
-        if (this.collection[j] > this.collection[j + 1]) {
-          const leftHand = this.collection[j];
-          this.collection[j] = this.collection[j + 1];
-          this.collection[j + 1] = leftHand;
-        }
-      }
-  }
-}
+const charactersCollection = new CharactesCollection('Xaayb');
+charactersCollection.sort();
 
-const sorter = new Sorter([10, 3, -5, 0]);
+const linkedList = new LinkedList();
+linkedList.add(500);
+linkedList.add(-10);
+linkedList.add(100);
+linkedList.add(-3);
+linkedList.add(4);
+linkedList.sort();
 
-sorter.sort();
-
-console.log(sorter.collection);
+console.log(numbersCollection.data);
+console.log(charactersCollection.data);
+linkedList.print();
