@@ -1,5 +1,3 @@
-import { UserProps } from './User';
-
 // ----------------------------------------
 
 export class Attributes<T> {
@@ -18,14 +16,14 @@ export class Attributes<T> {
   }
 }
 
-const attrs = new Attributes<UserProps>({
-  id: 5,
-  age: 20,
-  name: 'asdf',
-});
+// const attrs = new Attributes<UserProps>({
+//   id: 5,
+//   age: 20,
+//   name: 'asdf',
+// });
 
-const name = attrs.get('name');
-const age = attrs.get('age');
+// const name = attrs.get('name');
+// const age = attrs.get('age');
 
 /* --- experiments --------------------------
 const n: number = 2;

@@ -1,12 +1,9 @@
 // importing classes
-import { User } from './Models/User';
+import { UserForm } from './views/UserForm';
+import { User } from './models/User';
 
-// ---------------------------------------
+const user = User.buildUser({ name: 'NAME', age: 20 });
 
-const user = new User({ id: 1, name: 'newer name', age: 0 });
+const userForm = new UserForm(document.getElementById('root'), user);
 
-user.on('save', () => {
-  console.log(user);
-});
-
-user.save();
+userForm.render();
