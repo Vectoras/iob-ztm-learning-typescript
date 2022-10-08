@@ -18,6 +18,7 @@ function requireAuth(req: Request, res: Response, next: NextFunction): void {
   res.status(403);
   res.send('Not permitted');
 }
+
 // ---
 
 const router = Router();
